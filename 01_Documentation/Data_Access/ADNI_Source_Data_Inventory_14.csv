@@ -1,0 +1,15 @@
+No,FileName,AnalyticalPurpose
+1,UCBERKELEY_TAU_6MM_11Aug2026.csv,Non-PVC flortaucipir tau PET; index scan and meta-temporal SUVR
+2,All_Subjects_UCBERKELEY_AMY_6MM_12Aug2026.csv,Amyloid PET quantification and eligibility
+3,UPENN_PLASMA_FUJIREBIO_QUANTERIX_11Aug2026.csv,Fujirebio plasma p-tau217 measurements
+4,CDR_11Aug2026.csv,Baseline and longitudinal CDR-SB assessments
+5,DXSUM_11Aug2026.csv,Clinical diagnosis and disease-stage classification
+6,PTDEMOG_11Aug2026.csv,Demographic characteristics
+7,APOERES_18Oct2026.csv,Primary APOE genotype source
+8,C2N_PRECIVITYAD2_PLASMA_11Aug2026.csv,APOE genotype fallback source
+9,ANTIAMYTX_11Aug2026.csv,Anti-amyloid treatment sensitivity analysis
+10,All_Subjects_Key_PET_12Aug2026.csv,PET examination identification and matching
+11,PETMETA3_11Aug2026.csv,PET acquisition metadata
+12,PETMETA_ADNI1_11Aug2026.csv,ADNI1 PET acquisition metadata
+13,PETMETA_ADNIGO2_11Aug2026.csv,ADNIGO/ADNI2 PET acquisition metadata
+14,TAUMETA_11Aug2026.csv,Tau PET acquisition metadata
