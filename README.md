@@ -37,7 +37,7 @@ The repository includes **44 MATLAB (`.m`) scripts** and **2 R (`.R`) scripts**.
 
 ADNI source data must be obtained separately by an authorised researcher under the applicable ADNI data-access conditions. Consult [`ADNI_Source_Data_Inventory_14.csv`](01_Documentation/Data_Access/ADNI_Source_Data_Inventory_14.csv) for the documented 14-file source inventory. **Do not upload ADNI source files, participant-level derived datasets, or locally generated participant-level outputs to a public repository.**
 
-**Tau PET source clarification:** For reproduction, use the verified **non-partial-volume-corrected** UC Berkeley 6-mm flortaucipir tau PET source, `UCBERKELEY_TAU_6MM_11Aug2026.csv`. The detailed guide documents a discrepancy between the manuscript's cohort-selection and biomarker-source wording that should be resolved before manuscript publication.
+**Tau PET source clarification:** For reproduction, use the UC Berkeley non-partial-volume-corrected (NPVC) 6-mm flortaucipir tau PET dataset, `UCBERKELEY_TAU_6MM_11Aug2026.csv`. This is the source used for cohort construction and baseline meta-temporal tau PET quantification. The partial-volume-corrected dataset (`UCBERKELEY_TAUPVC_6MM`) was not used.
 
 ## Software and local paths
 
@@ -64,6 +64,8 @@ At a high level, the workflow covers:
 3. Fit the primary longitudinal mixed-effects model with biomarker-by-time interactions and uncorrelated participant-specific random intercepts and slopes.
 4. Compare nested biomarker models using maximum likelihood and evaluate incremental model information.
 5. Run the documented sensitivity, post hoc, attrition, and figure/table scripts in their required dependency order.
+
+**Amyloid PET tracer eligibility:** Initial screening permitted [¹⁸F]florbetapir, [¹⁸F]florbetaben, and [¹⁸F]NAV4694. After applying the prespecified imaging, biomarker, clinical, and longitudinal eligibility criteria, the final analytical cohort of 143 participants included 74 florbetapir and 69 florbetaben examinations. No NAV4694 examinations were represented in the final cohort. NAV4694 was not retrospectively excluded from the original eligibility criteria.
 
 Expected **cohort-flow checkpoints** are **1,246 → 1,237 → 1,100 → 469 → 275 → 211 → 210 → 143**; these are validation checkpoints, not counts to hard-code. The final model-ready dataset should contain **143 participants and 379 CDR-SB observations**. Report any deviations rather than adjusting results to match the checkpoints.
 

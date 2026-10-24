@@ -6,7 +6,7 @@ This guide describes how an authorised ADNI researcher can reproduce the study's
 
 Obtain the required ADNI releases through the applicable ADNI data-access process. Consult `01_Documentation/Data_Access/ADNI_Source_Data_Inventory_14.csv` for the exact filenames and purposes. The principal analytical inputs are UC Berkeley **non-partial-volume-corrected** 6-mm flortaucipir tau PET, UC Berkeley 6-mm amyloid PET, Fujirebio plasma p-tau217, CDR, DXSUM, PTDEMOG, APOERES, C2N PrecivityAD2 plasma and anti-amyloid treatment records. The five PET metadata files in the 14-file inventory are documented as potential supporting inputs; verify whether individual scripts require them. Do not commit restricted ADNI files or participant-level derived tables to a public repository.
 
-**Source clarification:** The study Methods' cohort-selection paragraph refers to a partial-volume-corrected tau source, but its biomarker section specifies non-PVC tau. The source-lineage audit independently reproduced all 1,237 index participants and their SUVRs from `UCBERKELEY_TAU_6MM_11Aug2026.csv` (non-PVC). **Use this verified non-PVC source** for reproduction; the contradictory Methods wording should be corrected before manuscript publication.
+**Source clarification:** The source-lineage audit independently reproduced all 1,237 index participants and their meta-temporal SUVRs from `UCBERKELEY_TAU_6MM_11Aug2026.csv`, the UC Berkeley non-partial-volume-corrected (NPVC) tau PET dataset. This verified NPVC dataset was used for cohort construction and baseline tau PET quantification. The partial-volume-corrected dataset (`UCBERKELEY_TAUPVC_6MM`) was not used.
 
 ## 2. Configure the environment
 
@@ -25,6 +25,8 @@ Obtain the required ADNI releases through the applicable ADNI data-access proces
 
 1. **Index tau PET:** Select the earliest [18F]flortaucipir scan per RID with a valid meta-temporal SUVR from the verified non-PVC Berkeley dataset. Expected index cohort: **1,237**.
 2. **Amyloid PET:** Match the nearest Berkeley amyloid PET within **±90 days** of index tau PET, then retain `AMYLOID_STATUS == 1`. Expected counts: **1,100** matched, **469** amyloid-positive. Use the corrected `Step03_Amyloid_Match_and_Positivity.m`; the historical benchmark of 1,101 is obsolete.
+
+**Amyloid PET tracer eligibility:** Initial screening permitted [¹⁸F]florbetapir, [¹⁸F]florbetaben, and [¹⁸F]NAV4694. Following application of all prespecified eligibility criteria, the final analytical cohort of 143 participants contained 74 florbetapir and 69 florbetaben examinations, with no NAV4694 examinations. NAV4694 was not retrospectively excluded from the initial screening criteria.
 3. **Plasma and baseline clinical status:** Select the valid Fujirebio `pT217_F` measurement nearest index tau PET within ±90 days and the nearest valid baseline CDR-SB assessment within ±90 days. Exclude baseline CDR-SB **≥9.5**.
 4. **Longitudinal qualification:** Require at least one post-index CDR-SB assessment between **3 months and 4 years** after index tau PET. Retain eligible visits individually; do not average repeated observations. Date each observation relative to the **index tau PET**, including baseline CDR-SB at its actual signed assessment time.
 5. **Diagnosis and demographics:** Assign diagnosis nearest index tau PET within ±90 days (CN/MCI/dementia). Obtain age, sex and education from demographic records, choosing the valid record nearest index tau PET where multiple records exist.
