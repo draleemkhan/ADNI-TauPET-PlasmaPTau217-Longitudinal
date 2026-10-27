@@ -31,7 +31,7 @@ The final analytical cohort comprises **143 participants** (33 cognitively norma
 └── 04_R_Codes/
 ```
 
-The repository includes **44 MATLAB (`.m`) scripts** and **2 R (`.R`) scripts**. `Source_SHA256.csv` contains **46 script records**, with fingerprints for the historical source scripts and their GitHub copies. The GitHub-copy hashes were updated after directory-path corrections; the original source hashes were preserved. Hash verification establishes file identity, **not** independent execution or reproduction of study results.
+The repository includes **47 MATLAB (`.m`) scripts** and **2 R (`.R`) scripts**. `Source_SHA256.csv` contains **49 script records**, with fingerprints for the historical source scripts and their GitHub copies. The GitHub-copy hashes were updated after directory-path corrections; the original source hashes were preserved. Hash verification establishes file identity, **not** independent execution or reproduction of study results.
 
 ## Data access
 
@@ -68,6 +68,8 @@ At a high level, the workflow covers:
 **Amyloid PET tracer eligibility:** Initial screening permitted [¹⁸F]florbetapir, [¹⁸F]florbetaben, and [¹⁸F]NAV4694. After applying the prespecified imaging, biomarker, clinical, and longitudinal eligibility criteria, the final analytical cohort of 143 participants included 74 florbetapir and 69 florbetaben examinations. No NAV4694 examinations were represented in the final cohort. NAV4694 was not retrospectively excluded from the original eligibility criteria.
 
 Expected **cohort-flow checkpoints** are **1,246 → 1,237 → 1,100 → 469 → 275 → 211 → 210 → 143**; these are validation checkpoints, not counts to hard-code. The final model-ready dataset should contain **143 participants and 379 CDR-SB observations**. Report any deviations rather than adjusting results to match the checkpoints.
+
+**Locked analysis workspace:** Run `Step08C_Construct_Locked_N143_Workspace.m` immediately after Step08. It rebuilds `ADNI_REVISED_COHORT_LOCKED_N143.mat`, which downstream scripts load; the reconstruction was verified identical to the original locked workspace.
 
 ## Reproducibility and limitations
 
