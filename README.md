@@ -37,6 +37,8 @@ The repository includes **47 MATLAB (`.m`) scripts** and **2 R (`.R`) scripts**.
 
 ADNI source data must be obtained separately by an authorised researcher under the applicable ADNI data-access conditions. Consult [`ADNI_Source_Data_Inventory_14.csv`](01_Documentation/Data_Access/ADNI_Source_Data_Inventory_14.csv) for the documented 14-file source inventory. **Do not upload ADNI source files, participant-level derived datasets, or locally generated participant-level outputs to a public repository.**
 
+The MIT License applies to the code in this repository only. ADNI data are not included and remain subject to the ADNI Data Use Agreement.
+
 **Tau PET source clarification:** For reproduction, use the UC Berkeley non-partial-volume-corrected (NPVC) 6-mm flortaucipir tau PET dataset, `UCBERKELEY_TAU_6MM_11Aug2026.csv`. This is the source used for cohort construction and baseline meta-temporal tau PET quantification. The partial-volume-corrected dataset (`UCBERKELEY_TAUPVC_6MM`) was not used.
 
 ## Software and local paths
