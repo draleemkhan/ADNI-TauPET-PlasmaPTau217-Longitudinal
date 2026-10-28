@@ -31,7 +31,7 @@ The final analytical cohort comprises **143 participants** (33 cognitively norma
 └── 04_R_Codes/
 ```
 
-The repository includes **47 MATLAB (`.m`) scripts** and **2 R (`.R`) scripts**. `Source_SHA256.csv` contains **49 script records**, with fingerprints for the historical source scripts and their GitHub copies. The GitHub-copy hashes were updated after directory-path corrections; the original source hashes were preserved. Hash verification establishes file identity, **not** independent execution or reproduction of study results.
+The repository includes **48 MATLAB (`.m`) scripts** and **2 R (`.R`) scripts**. `Source_SHA256.csv` contains **50 script records**, with fingerprints for the historical source scripts and their GitHub copies. The GitHub-copy hashes were updated after directory-path corrections; the original source hashes were preserved. Hash verification establishes file identity, **not** independent execution or reproduction of study results.
 
 ## Data access
 
